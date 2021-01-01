@@ -1,0 +1,78 @@
+<div class="container">
+    <section class="row justify-content-center">
+            <form class="form-container" *ngIf="!submitted">
+                <div hidden class="row">
+                    <div>
+                        <div class="row form-group">
+                            <div>
+                                <label>Employee Id : </label>
+                            </div>
+                            <div class="col-sm-7">
+                                <input type="number" class="form-control" name="eid" [(ngModel)]="empModel.empId">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <div class="row form-group">
+                            <div class="col-sm-4">
+                                <label><b>Name</b>: </label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control"  name="name" [(ngModel)]="empModel.name">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <div class="row form-group">
+                            <div class="col-sm-4">
+                                <label><b>Phone:</b></label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="Phone" [(ngModel)]="empModel.pho">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <div class="row form-group">
+                            <div class="col-sm-4">
+                                <label><b>Email:</b></label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="email" [(ngModel)]="empModel.email">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <div class="row form-group">
+                            <div class="col-sm-4">
+                                <label><b>Address:</b></label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="address" [(ngModel)]="empModel.address">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"> 
+                    <button type="reset" class="btn btn-primary"style="margin-right: 5px;">Reset</button>
+                    <button type="submit" class="btn btn-primary" (click)="saveEmployee()">Register</button>
+                </div>
+                <div>
+                    <a href="http://localhost:4200">Click here to View All Contacts</a>
+                </div>
+            </form>
+            <div *ngIf="submitted">
+                <h1>{{message}}</h1>
+                <a href="http://localhost:4200">Click here to View All Contacts</a>
+            </div>
+    </section>
+</div>
+
